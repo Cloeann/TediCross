@@ -6,7 +6,7 @@ telegram:
   sendEmojiWithStickers: true
 
 discord:
-  useNickname: false
+  useNickname: true
   token: env
   skipOldMessages: true
   replyLength: 100
