@@ -1,0 +1,37 @@
+telegram:
+  token: env
+  useFirstNameInsteadOfUsername: false
+  colonAfterSenderName: false
+  skipOldMessages: true
+  sendEmojiWithStickers: true
+
+discord:
+  useNickname: false
+  token: env
+  skipOldMessages: true
+  replyLength: 100
+  maxReplyLines: 2
+
+bridges:
+  - name: Magic War Telegram
+    direction: both
+
+    telegram:
+      chatId: -1003867877823
+      relayJoinMessages: true
+      relayLeaveMessages: true
+      sendUsernames: true
+      relayCommands: true
+      crossDeleteOnDiscord: true
+
+    discord:
+      channelId: '1551748946072838175'
+      relayJoinMessages: true
+      relayLeaveMessages: true
+      sendUsernames: true
+      crossDeleteOnTelegram: true
+
+debug: false
+messageTimeoutAmount: 24
+messageTimeoutUnit: 'hours'
+persistentMessageMap: false
