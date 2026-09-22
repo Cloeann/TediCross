@@ -8,5 +8,5 @@ COPY . .
 
 RUN npm install --omit=dev
 
-ENTRYPOINT ["/usr/local/bin/npm"]
-CMD ["start", "--", "-c", "data/settings.yaml"]
+ENTRYPOINT ["/bin/sh", "-c"]
+CMD ["if [ ! -f /opt/TediCross/data/settings.yaml ]; then cp /opt/TediCross/settings.template.yaml /opt/TediCross/data/settings.yaml; fi && exec npm start -- -c data/settings.yaml"]
